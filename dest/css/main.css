@@ -1,0 +1,308 @@
+.slider {
+  width: 1280px;
+  height: 752px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0 auto;
+  background: url('/img/back.png') no-repeat;
+}
+.slider-controls {
+  position: relative;
+  top: -65px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 260px;
+  width: 100%;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  padding-bottom: 40px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.slider-inner {
+  margin: auto;
+}
+.slider-inner__pill {
+  position: absolute;
+  top: 265px;
+  left: 100px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+.slider-inner__pill img {
+  max-width: 100%;
+  height: auto;
+  -webkit-animation: pill 4s infinite linear;
+  animation: pill 4s infinite linear;
+}
+.slider-inner__item {
+  display: block;
+  width: 455px;
+  height: 440px;
+  padding-top: 80px;
+  background: url('/img/sad.png') center no-repeat;
+  -webkit-transition: all 1.25s;
+  transition: all 1.25s;
+}
+.slider .range-group {
+  width: 80%;
+  position: relative;
+}
+.slider .range-values {
+  position: relative;
+  top: -10px;
+  height: 24px;
+  width: 100%;
+  padding-bottom: 30px;
+  background: url('/img/figures.png') 40px 0 no-repeat;
+  z-index: 10;
+}
+.slider .range-values__caret {
+  z-index: 0;
+  top: -20px;
+  left: 24px;
+  display: inline-block;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: url('/img/roller red.png') no-repeat;
+}
+.slider .btn {
+  display: inline-block;
+  width: 210px;
+  height: 75px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.slider .btn-group {
+  position: relative;
+  top: 16px;
+}
+.slider .btn-day {
+  background: url('/img/day-button.png') no-repeat;
+}
+.slider .btn-day:active,
+.slider .btn-day:focus,
+.slider .btn-day:hover,
+.slider .btn-day .active {
+  background: url('/img/day-pushed-button.png') no-repeat;
+}
+.slider .btn-week {
+  background: url('/img/week-button.png') no-repeat;
+}
+.slider .btn-week:active,
+.slider .btn-week:focus,
+.slider .btn-week:hover,
+.slider .btn-week .active {
+  background: url('/img/week-pushed-button.png') no-repeat;
+}
+.slider .btn-mounth {
+  background: url('/img/mounth-button.png') no-repeat;
+}
+.slider .btn-mounth:active,
+.slider .btn-mounth:focus,
+.slider .btn-mounth:hover,
+.slider .btn-mounth .active {
+  background: url('/img/mounth-pushed-button.png') no-repeat;
+}
+.slider input:checked + .btn-day {
+  background: url('/img/day-pushed-button.png') no-repeat;
+}
+.slider input:checked + .btn-week {
+  background: url('/img/week-pushed-button.png') no-repeat;
+}
+.slider input:checked + .btn-mounth {
+  background: url('/img/mounth-pushed-button.png') no-repeat;
+}
+.slider-control-prev {
+  position: absolute;
+  width: 40px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.slider-control-prev :hover {
+  cursor: pointer;
+}
+.slider-control-prev__icon {
+  width: 32px;
+  height: 59px;
+  background: url('/img/arrow.png') no-repeat;
+}
+.slider-control-next {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  padding-right: 10px;
+  bottom: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.slider-control-next :hover {
+  cursor: pointer;
+}
+.slider-control-next__icon {
+  width: 32px;
+  height: 59px;
+  background: url('/img/arrow.png') no-repeat;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 99%;
+  height: 25px;
+  background: transparent;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 25px;
+  cursor: pointer;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background: url('/img/roller white.png') no-repeat 50% 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -30px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: transparent;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 25;
+  cursor: pointer;
+  background: transparent;
+}
+input[type=range]::-moz-range-thumb {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: none;
+  background: url('/img/roller white.png') no-repeat 50% 50%;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 25px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: transparent;
+  border-radius: 50px;
+}
+input[type=range]::-ms-fill-upper {
+  background: transparent;
+  border-radius: 50px;
+}
+input[type=range]::-ms-thumb {
+  display: inline-block;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: url('/img/roller white.png') no-repeat 50% 50%;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: transparent;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: transparent;
+}
+input[hidden],
+.hidden {
+  display: none!important;
+}
+input[disabled],
+input[disabled] + label {
+  cursor: default;
+}
+@-webkit-keyframes pill {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(15deg) scale(1.1);
+    transform: rotate(15deg) scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes pill {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(15deg) scale(1.1);
+    transform: rotate(15deg) scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

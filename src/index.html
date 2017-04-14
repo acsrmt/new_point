@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slider</title>
+</head>
+
+<body>
+    <article class="slider">
+        <div class="slider-inner">
+            <div class="slider-inner__item" id="droppable"></div>
+            <div class="slider-inner__pill" id="draggable"><img src="img/780px-Pill.svg[1].png" alt=""></div>
+        </div>
+        <form class="slider-controls" id="form">
+            <div class="range-group">
+                <div class="range-values"></div>
+                <span id="range-values__caret" class="range-values__caret"></span>
+                <input id="range-values__input" type="range" min="1" max="21" value="1">
+            </div>
+            <div class="btn-group">
+                <input type="radio" name="period" value="day" id="btn-day" hidden><label class="btn btn-day" for="btn-day"></label>
+                <input type="radio" name="period" value="week" id="btn-week" hidden><label class="btn btn-week" for="btn-week"></label>
+                <input type="radio" name="period" value="moutn" id="btn-mounth" hidden><label class="btn btn-mounth" for="btn-mounth"></label>
+            </div>
+        </form>
+        <div class="slider-control-prev">
+            <span class="slider-control-prev__icon hidden"></span>
+        </div>
+        <div class="slider-control-next">
+            <span class="slider-control-next__icon hidden"></span>
+        </div>
+    </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/utils/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+</body>
+
+</html>
